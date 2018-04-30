@@ -1,0 +1,42 @@
+{
+  "name": "express-babel",
+  "version": "1.0.0",
+  "description": "Express app using babel with latest JavaScript features",
+  "main": "dist/index.js",
+  "repository": "https://github.com/hoangphison/express-babel.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
+    "clean:dist": "rimraf dist",
+    "build": "npm run clean:dist && mkdir -p dist && babel src -s -D -d dist",
+    "lint": "eslint src/**"
+  },
+  "keywords": [
+    "express",
+    "babel",
+    "es6",
+    "boilerplate",
+    "scaffold"
+  ],
+  "author": "HOANG PHI SON <hoangphison9x@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "moment": "^2.22.1",
+    "morgan": "^1.9.0",
+    "split": "^1.0.1",
+    "throw.js": "^3.0.1",
+    "winston": "^2.4.2",
+    "winston-daily-rotate-file": "^3.1.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "nodemon": "^1.17.3",
+    "rimraf": "^2.6.2"
+  }
+}
